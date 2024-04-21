@@ -1,0 +1,48 @@
+.authPage{
+    // background-image: url('#{$imageurl}/authpage-bg.jpg');
+    background-size: cover;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    &_wrapper{
+        padding: 60px 0;
+    }
+    &_logo{
+        img{
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            color: color(700);
+        }
+    }
+    &_box{
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: color(50);
+        border-radius: 5px;
+        overflow: hidden;
+        &_bg{
+            // background-image: url('#{$imageurl}/auth-left.svg');
+            background-size: cover;
+            background-color: color(500);
+        }
+        .form-group{
+            margin-bottom: 30px;
+        }
+    }
+    &_form{
+        background-color: #fff;
+        border-radius: 5px;
+        &_head{
+            margin-bottom: 50px;
+            // h2{font-size: 30px;font-family: font(md);}
+        }
+    }
+    &_link{
+        font-size: 15px;
+        color: color(500);
+        &:hover{
+            color: darken(color(500), 5%);
+        }
+    }
+}

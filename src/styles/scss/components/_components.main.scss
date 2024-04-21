@@ -1,0 +1,26 @@
+// components
+@import "component.icomoon";
+@import "./components.button";
+@import "component.form";
+@import "component.select";
+@import "./component.card";
+@import "./component.avatar";
+@import "component.dropdown";
+@import "component.datatable";
+@import "component.profilesidebar";
+@import "component.usertab";
+@import "component.badge";
+@import "component.antselect";
+@import "component.swal2";
+@import "component.toastr";
+// layout
+@import "layout/layout.header";
+@import "layout/layout.footer";
+@import "layout/layout.sidebar";
+
+//modal
+@import "modal/modal-main";
+
+//Antd
+@import "./ant-form/ant-form.scss"
+

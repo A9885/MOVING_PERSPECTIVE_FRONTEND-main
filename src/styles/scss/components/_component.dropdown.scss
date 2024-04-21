@@ -1,0 +1,71 @@
+.dropdown{
+  &-toggle{
+    &:after{
+      display: none;
+    }
+  }
+    &-menu{
+        border: 0;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        overflow: hidden;
+        @include box-shadow(0px, 0px, 15px, rgba(color(900), 0.08));
+        &-lg{
+            width: 360px;
+        }
+        &-sm{
+          width: 200px;
+        }
+        &.animate {
+            animation-name: slideIn;
+            animation-duration: 0.3s;
+            animation-fill-mode: both;
+        }
+        &-xs{
+          min-width: 130px;
+          @include box-shadow(0px, 0px, 20px, 10px, rgba(color(700), 0.10));
+          &.animate {
+            animation-name: slideIn-xs;
+          }
+        }
+        &[x-placement='top-end']{
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 0;
+        }
+    }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn-xs {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(40px);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}

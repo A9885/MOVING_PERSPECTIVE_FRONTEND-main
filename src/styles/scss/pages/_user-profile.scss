@@ -1,0 +1,239 @@
+.userDetails{
+    &_data{
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $bg-light;
+    }
+    &_profile{
+        max-width: 180px;
+        width: 100%;
+        margin-right: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &_cnt{
+        width: 100%;
+        .profileData{
+            h3{
+                font-size: 24px;
+                // font-family: font(sb);
+                margin-bottom: 10px;
+            }
+            ul{
+                li{
+                    font-size: 15px;
+                    color: $text-gray-700;
+                    @include flexcenter(y);
+                    &:not(:last-child){
+                        margin-right: 20px;
+                    }
+                    .icon{
+                        font-size: 18px;
+                        margin-right: 8px;
+                        color: $text-gray-700;
+                    }
+                }
+            }
+        }
+        .orderData{
+            margin-top: 30px;
+            &_box{
+                position: relative;
+                background-color: $bg-light;
+                border-radius: 5px;
+                padding: 15px;
+                margin-right: 20px;
+                max-width: 220px;
+                width: 100%;
+                overflow: hidden;
+                h4{
+                    font-size: 26px;
+                    // font-family: font(sb);
+                    margin-bottom: 0;
+                    color: color(500);
+                }
+                p{
+                    font-size: 16px;
+                    color: $text-gray-700;
+                }
+                em{
+                    color: color(500);
+                    background-color: $bg-light;
+                    font-size: 25px;
+                    max-width: 50px;
+                    height: 50px;
+                    width: 100%;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    @include flexcenter(both);
+                }
+            }
+        }
+    }
+    &_tables{
+        .basicDetails{
+            padding: 20px 30px;
+            &_left{
+                &_item{
+                    margin-bottom: 30px;
+                    h4{color: $text-gray-700;}
+                    p{color: $text-gray-700;}
+                }
+            }
+            &_right{
+                .address{
+                    padding: 25px;
+                    border: 1px dashed color(500);
+                    border-radius: 15px;
+                    background-color: $bg-light;
+                    margin-bottom: 20px;
+                    h3{
+                        font-size: 15px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        color: $text-gray-700;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1699px){
+        &_profile{
+            max-width: 150px;
+        }
+        &_cnt{
+            .profileData{
+                h3{
+                    font-size: 22px;
+                    margin-bottom: 5px;
+                }
+            } 
+            .orderData{
+                margin-top: 20px;
+                &_box{
+                    max-width: 175px;
+                    padding: 10px;
+                    // &:not(:last-child){
+                    //     margin-right: 15px;
+                    // }
+                    em{
+                        max-width: 35px;
+                        height: 35px;
+                        font-size: 20px;
+                    }
+                    h4{
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_cnt{
+            .profileData{
+                h3{
+                    font-size: 20px;
+                }
+            }
+        }
+        &_data{
+            padding-bottom: 20px;
+            margin-bottom: 0;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_profile{
+            max-width: 130px;
+            margin-right: 20px;
+        }
+        &_cnt{
+            .profileData{
+                ul{
+                    li{
+                        margin-bottom: 5px;
+                        .icon{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .orderData{
+                &_box{
+                    // max-width: 30%;
+                    margin-bottom: 10px;
+                    em{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &_tables {
+            .basicDetails{
+                &_right{
+                    .address{
+                        padding: 15px;
+                        margin-bottom: 15px;
+                    }
+                } 
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_profile{
+            max-width: 100px;
+        }
+        &_cnt{
+            .profileData{
+                h3{
+                    font-size: 17px;
+                }
+            }
+            .orderData{
+                margin-top: 10px;
+                &_box{
+                    max-width: 135px;
+                    h4{
+                        font-size: 18px;
+                    }
+                    em{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &_tables{
+            .basicDetails{
+                &_left{
+                    &_item{
+                        margin-bottom: 20px;
+                        h4{
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_cnt{
+            margin-top: 10px;
+            .orderData{
+                &_box{
+                    // max-width: 50%;
+                }
+            }
+        }
+    }
+    @media (max-width: 450px){
+        &_cnt{
+            .status{
+                margin: 10px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+$btn-primary: $primary;
+$btn-light: #e6eaed;
+.swal2{
+    &-icon {
+        margin-top: 0; border-style: dotted;
+        &.swal2-warning {
+            border-color: #f7b84b;
+            color: #b87d17;
+            &.swal2-icon-show{
+                .swal2-icon-content {
+                    animation: swal2-animate-i-mark .5s;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
+                    animation-delay: 0.8s;
+                }
+            }
+        }
+        &.swal2-success{
+            .swal2-success-line{
+                &-tip{background-color: $success;}
+                &-long{background-color: $success;}
+            }
+            .swal2-success-ring{
+                border-color: rgba($success, 0.3);
+            }
+        }
+    }
+    &-popup{padding: 30px; border-radius: 15px; width: 100%; max-width: 480px;}
+    &-title{
+        font-size: 26px; color: $text-gray-800; padding-left: 0; padding-right: 0;
+    }
+    &-container{
+        .swal2-html-container{
+            font-size: 16px; line-height: 1.4; color: $text-gray-600; margin-bottom: 0; margin-left: 0; margin-right: 0;
+        }
+        button:where(.swal2-styled){
+            outline: none !important; box-shadow: none !important;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                background-image: none !important;
+            }
+            &.swal2-confirm{
+                background: $btn-primary; 
+                &:hover, &:active, &:focus, &.focus &.active,&.show,&-check:checked + &,
+                &:focus-visible, &:not(.btn-check) + &:hover,
+                &:first-child:hover, &-check:focus-visible + &, &:first-child:active, &:not(.btn-check)+ &:active
+                {
+                    background-color: darken($btn-primary, 6%) !important;  box-shadow: none !important;
+                }
+            }
+            &.swal2-cancel{
+                color: $btn-dark ;
+                background: $btn-light;
+                &:hover, &:active, &:focus, &.focus &.active,&.show,&-check:checked + &,
+                &:focus-visible, &:not(.btn-check) + &:hover,
+                &:first-child:hover, &-check:focus-visible + &, &:first-child:active, &:not(.btn-check)+ &:active
+                {
+                    background-color: darken($btn-light, 6%) !important;  box-shadow: none !important;
+                }
+            }
+        }
+    }
+        
+    
+    &-cancel{
+        color: $btn-dark !important;
+    }
+    button{transition: all 0.4s ease-in-out !important;}
+}

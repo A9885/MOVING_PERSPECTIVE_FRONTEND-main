@@ -1,0 +1,15 @@
+export const text = {
+  title: "Login",
+  metaTitle: "Login",
+  signIn: "Sign In",
+  login: "Login",
+  emailPlaceholder: "Enter Email",
+  passwordPlaceholder: "Enter Password",
+  enjoyHost: "Enjoy a host of benefits without any commitment.",
+  cantLogin: "Can't Login?",
+  dontHaveAnAccount: "Don't have an account?",
+  signUp: "Sign Up",
+  loginWithFacebook: "Log in with Facebook",
+  loginWithGoogle: "Log in with Google",
+  fullNamePlaceHolder: "Enter Full Name",
+};

@@ -1,0 +1,10 @@
+.badge{
+    font-size: 13px; border-radius: 3px;
+    &-border{border-left: 2px solid;}
+    &-md{
+        font-size: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

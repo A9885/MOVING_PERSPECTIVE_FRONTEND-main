@@ -1,0 +1,136 @@
+.datatable{
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 700px;
+    &_search{
+        .form-control{
+            padding-left: 50px;
+            border: 0;
+            background-color: $bg-light;
+        }
+        &_icon{
+            width: 40px;
+            height: 100%;
+            top: 0;
+            @include flexcenter(both);
+            &::after{
+                position: absolute;
+                content: '|';
+                color: rgba(color(700), 0.10);
+                right: 0;
+            }
+            .icon{
+                font-size: 18px;
+                color: rgba(color(700), 0.50);
+            }
+        }
+    }
+    &_paginate{
+        .paginate{
+            &_button{
+                &:not(:last-child){
+                    margin-right: 7px;
+                }
+                .page-link{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: 0;
+                    background-color: $bg-light;
+                    color: color(500);
+                    font-size: 14px;
+                    @include flexcenter(both);
+                    em{
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        background-color: rgba(color(500), 0.17);
+                    }
+                    &:focus{
+                        box-shadow: none;
+                    }
+                }
+                &.active{
+                    .page-link{
+                        background-color: color(500);
+                        border-color: color(500);
+                        color: color(50);
+                    }
+                }
+            }
+        }
+    }
+    &-filter{
+        .filterData{
+            &_icon{
+                width: 45px;
+                height: 45px;
+                background-color: $bg-light;
+                border-radius: 4px;
+                color: $text-gray-700;
+                @include flexcenter(both);
+                .icon{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .table{
+        color: $text-gray-800;
+        thead{
+            th{
+                background: #f3f6f9;
+            }
+        }
+        th, td{
+            font-size: 15px;
+            padding: 12px 10px;
+            color: $text-gray-800;
+            border-color: $border-color-100;
+        }
+        tbody{
+            tr{
+                th, td{
+                    color: $text-gray-700;
+                    transition: all 0.3s ease-in-out;
+                    position: relative;
+                    &:first-child{
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            left: -100%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            height: 50%;
+                            width: 4px;
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            background-color: color(500);
+                            transition: left 0.3s ease-in-out;
+                        }
+                    }
+                }
+                &:hover{
+                    td, th {
+                        background: $bg-light;
+                        &:first-child{
+                            &:before{
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-nowrap{
+            th, td{
+                white-space: nowrap;
+            }
+        }
+        .w-60{
+            width: 60px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+$card-shadow : rgba(#000, 0.04);
+$card-border-color: $border-color-100;
+$card-title-color: $text-gray-800;
+$card-padding: 25px;
+.card{
+    margin-bottom: 24px;
+    -webkit-box-shadow: 0 2px 3px $card-shadow;
+    // box-shadow: 0 2px 3px $card-shadow;
+    box-shadow: 0px 9px 20px rgba(46, 35, 94, 0.07);
+    border-radius: 10px;
+    border: 1px solid $card-border-color;
+    &-header{
+        border-bottom: 1px solid $card-border-color;
+        background: transparent;
+        padding: $card-padding;
+    }
+    &-title{
+        font-size: 18px;
+        margin: 0 0 6px 0;
+        // font-family: font(md);
+        color: $card-title-color;
+    }
+    &-body{padding: $card-padding;}
+    @include media-breakpoint-down(xxl){
+        &-header, &-body{
+            padding: 15px;
+        }
+        &-title{
+            font-size: 16px;
+        }
+    }
+}

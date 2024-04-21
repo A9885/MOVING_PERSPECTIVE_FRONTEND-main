@@ -1,0 +1,135 @@
+.profileSidebar{
+    width: 400px;
+    height: 100%;
+    background:color(50);
+    position: fixed;
+    top: 0;
+    right: -400px;
+    z-index: 9999;
+    overflow-y: auto;
+    @include transition(all 0.4s ease);
+    &.open{
+        right: 0;
+        @include transition(all 0.4s ease);
+    }
+    .closeSidebar{
+        position: absolute;
+        background-color: rgba(color(50), 0.50);
+        width: 30px;
+        height: 30px;
+        top: 15px;
+        left: 15px;
+        z-index: 99;
+        border-radius: 50%;
+        @include flexcenter(both);
+        .icon{
+            color: color(50);
+            font-size: 18px;
+        }
+    }
+    &_imgsec{
+        margin-bottom: 60px;
+        .coverImg{
+            img{
+                height: 130px;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        .uploadImg{
+            bottom: -60px;
+            @include absolutecenter(x);
+        }
+    }
+    &_cnt{
+        padding: 15px 20px;
+        .profileDetail{
+            margin-bottom: 25px;
+            h3{
+                font-size: 20px;
+                // font-family: font(md);
+                margin-bottom: 5px;
+                color: $text-gray-800;
+            }
+            h4{
+                font-size: 16px;
+                // font-family: font(lt);
+                color: color(700);
+            }
+            .btn-sm{
+                font-size: 13px;
+                background-color: rgba(color(500), 0.08);
+                margin-top: 10px;
+                &:hover{
+                    background-color: rgba(color(500), 0.15);
+                }
+            }
+        }
+    }
+    &_accordion{
+        .accordion-item{
+            border: 0;
+            background-color: transparent;
+            margin-bottom: 20px;
+            &:not(:last-child){
+                border-bottom: 1px solid rgba(color(700), 0.15);
+            }
+        }
+        .accordion-button{
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0 0 20px 0;
+            font-size: 16px;
+            // font-family: font(md);
+            color: $text-gray-800;
+            &:after{
+                background-image: none;
+                content: '\e9c5';
+                font-family: 'icomoon';
+                font-size: 22px;
+                position: absolute;
+                right: 0;
+                width: auto;
+                height: auto;
+            }
+        }
+        .accordion-body{
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .passwordInfo{
+            &_indicator{
+                width: 100%;
+            }
+            .strength{
+                margin: 0 -4px;
+                &_indicate{
+                    width: 33.33%;
+                    height: 8px;
+                    border-radius: 30px;
+                    margin: 0 4px;
+                    opacity: 0.2;
+                    &.done{
+                        opacity: 1;
+                    }
+                }
+            }
+            h6{
+                font-size: 14px;
+                // font-family: font(md);
+                color: $text-gray-800;
+            }
+            .indicateMessage{
+                margin-top: 7px;
+                p{
+                    font-size: 14px;
+                    color: $text-gray-700;
+                    display: none;
+                    &.show{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
